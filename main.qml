@@ -12,4 +12,29 @@ Window {
         anchors.fill: parent
         source: "file://home/paul/workspace/Chess/chessboardimage.jpg"
     }
+    GridView {
+        anchors.fill: parent
+        model: 8
+        delegate: Column {
+            Repeater {
+                model: 8
+                delegate: Square{}
+            }
+        }
+    }
+
+//    Grid {
+//        columns: 8
+//        rows: 8
+//        Repeater {
+//            model: 8
+//            delegate: columnSquares
+//        }
+
+//        Repeater {
+//            id: columnSquares
+//            model: 8
+//            delegate: Square{}
+//        }
+//    }
  }

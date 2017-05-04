@@ -5,5 +5,6 @@ Rectangle {
 
     height: 100
     width: 100
-    color: "blue"
+    border.color: "red"
+    color: "transparent"
 }
