@@ -11,31 +11,32 @@ Window {
 
     //one way to make the window fixed size
     //TODO Find a more elegant solution
-    maximumHeight: 800
-    minimumHeight: 800
-    maximumWidth: 1024
-    minimumWidth: 1024
+    maximumHeight: 650
+    minimumHeight: 650
+    maximumWidth: 600
+    minimumWidth: 600
     title: qsTr("Hello World")
 
 
-    Image {
-        anchors.fill: parent
-        source: "file://home/paul/workspace/Chess/chessboardimage.jpg"
-    }
+    //home source image
+    //swap with current dependent on work environment
+    //        source: "file://home/paul/workspace/Chess/chessboardimage.jpg"
     Item {
         id: testees
         anchors.fill: parent
+        anchors.bottomMargin: 50
+
+        Image {
+            anchors.fill: parent
+            source: "file://home/uidq6356/workspace/practice/home/chess/chessboard.png"
+        }
 
         Grid {
             id: anchorGrid
 
+            anchors.fill:testees
             columns: 8
             rows: 8
-            anchors.fill: parent
-            anchors.leftMargin: 10
-            anchors.topMargin: 10
-            anchors.bottomMargin: 10
-            anchors.rightMargin: 10
 
             Repeater {
                 model: 8
@@ -47,25 +48,25 @@ Window {
             }
         }
 
-        Rectangle {
-            id: closeButton
+    }
+    Rectangle {
+        id: closeButton
 
-            anchors.bottom: testees.bottom
-            anchors.bottomMargin: 50
-            width: parent.width
-            height: 50
-            color: "yellow"
-            Text {
+        anchors.top:testees.bottom
+        width: parent.width
+        height: 50
+        color: "yellow"
 
-                anchors.centerIn: parent
-                text: "Close"
-                font.pointSize: 30
-                color: "black"
-            }
-            MouseArea {
-                anchors.fill: parent
-                onClicked: mainWindow.close()
-            }
+        Text {
+            anchors.centerIn: parent
+            text: "Close Application"
+            font.pointSize: 30
+            color: "black"
+        }
+
+        MouseArea {
+            anchors.fill: parent
+            onClicked: mainWindow.close()
         }
     }
 }
