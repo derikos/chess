@@ -3,8 +3,8 @@ import QtQuick 2.0
 Rectangle {
     id: square
 
-    height: 100
-    width: 100
+    height: 70
+    width: 70
     border.color: "red"
     color: "transparent"
     MouseArea{
