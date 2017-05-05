@@ -1,27 +1,3 @@
 # chess
-Bits of removed initial code to be used for future reference
-
-
- //    MouseArea {
-    //        anchors.fill: parent
-    //        onClicked: {
-    //            console.log(qsTr('Clicked on background. Text: "' + textEdit.text + '"'))
-    //        }
-    //    }`
-
-//    TextEdit {
-//        id: textEdit
-//        text: qsTr("Enter some text...")
-//        verticalAlignment: Text.AlignVCenter
-//        anchors.top: parent.top
-//        anchors.horizontalCenter: parent.horizontalCenter
-//        anchors.topMargin: 20
-//        Rectangle {
-//            anchors.fill: parent
-//            anchors.margins: -10
-//            color: "transparent"
-//            border.width: 1
-//        }
-//    }
-}
-
+Small chess project to learn a bit more about qml and how it interacts with c++
+Specifically curious to learn how to do all logic in c++ and the graphical interface with qml

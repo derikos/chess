@@ -7,4 +7,10 @@ Rectangle {
     width: 100
     border.color: "red"
     color: "transparent"
+    MouseArea{
+        anchors.fill: parent
+        onClicked: {
+            console.log("Clicked")
+           }
+    }
 }
