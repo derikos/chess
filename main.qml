@@ -11,8 +11,8 @@ Window {
 
     //one way to make the window fixed size
     //TODO Find a more elegant solution
-    maximumHeight: 650
-    minimumHeight: 650
+    maximumHeight: 600
+    minimumHeight: 600
     maximumWidth: 600
     minimumWidth: 600
     title: qsTr("Hello World")
@@ -23,11 +23,17 @@ Window {
     //        source: "file://home/paul/workspace/Chess/chessboardimage.jpg"
     Item {
         id: testees
-        anchors.fill: parent
-        anchors.bottomMargin: 50
+           anchors.top:parent.top
+           anchors.left:parent.left
+           anchors.right:parent.right
+
+           width: 560
+           height:560
 
         Image {
-            anchors.fill: parent
+//            anchors.fill: testees
+            width: 560
+            height: 560
             source: "file://home/uidq6356/workspace/practice/home/chess/chessboard.png"
         }
 
@@ -35,6 +41,8 @@ Window {
             id: anchorGrid
 
             anchors.fill:testees
+            anchors.leftMargin: 1
+            anchors.topMargin: 1
             columns: 8
             rows: 8
 
@@ -46,6 +54,7 @@ Window {
                     delegate: Square{}
                 }
             }
+
         }
 
     }
@@ -54,13 +63,13 @@ Window {
 
         anchors.top:testees.bottom
         width: parent.width
-        height: 50
+        height: 30
         color: "yellow"
 
         Text {
             anchors.centerIn: parent
             text: "Close Application"
-            font.pointSize: 30
+            font.pointSize: 26
             color: "black"
         }
 
