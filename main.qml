@@ -15,9 +15,7 @@ Window {
     minimumHeight: 600
     maximumWidth: 600
     minimumWidth: 600
-    title: qsTr("Hello World")
-
-
+    title: qsTr("Fuck the World")
     //home source image
     //swap with current dependent on work environment
     //        source: "file://home/paul/workspace/Chess/chessboardimage.jpg"
