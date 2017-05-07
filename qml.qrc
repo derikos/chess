@@ -3,5 +3,6 @@
         <file>main.qml</file>
         <file>Square.qml</file>
         <file>screen.qml</file>
+        <file>Pawn.qml</file>
     </qresource>
 </RCC>

@@ -21,6 +21,7 @@ Window {
     //home source image
     //swap with current dependent on work environment
     //        source: "file://home/paul/workspace/Chess/chessboardimage.jpg"
+    //          "file://home/uidq6356/workspace/practice/home/chess/chessboard.png"
     Item {
         id: testees
            anchors.top:parent.top
@@ -31,10 +32,10 @@ Window {
            height:560
 
         Image {
-//            anchors.fill: testees
+//            anchors.fill: testees  **For some reason anchors.fill doesn't work as intended **
             width: 560
             height: 560
-            source: "file://home/uidq6356/workspace/practice/home/chess/chessboard.png"
+            source: "file://home/paul/workspace/Chess/resources/chessboard.png"
         }
 
         Grid {
@@ -51,7 +52,9 @@ Window {
                 delegate: Square{}
                 Repeater {
                     model: 8
-                    delegate: Square{}
+                    delegate: Square{
+                    Pawn{}
+                    }
                 }
             }
 
@@ -69,7 +72,7 @@ Window {
         Text {
             anchors.centerIn: parent
             text: "Close Application"
-            font.pointSize: 26
+            font.pointSize: 24
             color: "black"
         }
 
